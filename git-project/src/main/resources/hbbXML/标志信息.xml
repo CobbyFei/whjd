@@ -1,0 +1,19 @@
+<LabelData>
+	<Label>
+		<LabelNo>String</LabelNo>
+		<AuthCode>String</AuthCode>
+		<License>String</License>
+		<LicenseType>0</LicenseType>
+		<VehicleModel>String</VehicleModel>
+		<VehicleType>String</VehicleType>
+		<VIN>String</VIN>
+		<RegisterDate>1900-01-01</RegisterDate>
+		<FuelType>A</FuelType>
+		<LabelType>0</LabelType>
+		<Standard>0</Standard>
+		<UseType>A</UseType>
+		<GiveDate>1900-01-01</GiveDate>
+		<AvildDate>1900-01-01</AvildDate>
+		<TestNo>String</TestNo>
+	</Label>
+</LabelData>

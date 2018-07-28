@@ -1,0 +1,38 @@
+<TestData>
+	<Test>
+		<AuthCode>String</AuthCode>
+		<License>String</License>
+		<LicenseType>0</LicenseType>
+		<TestDate>1900-01-01 00:00:00</TestDate>
+		<AreaCode>String</AreaCode>
+		<VehicleModel>String</VehicleModel>
+		<VehicleType>String</VehicleType>
+		<UseType>A</UseType>
+		<VIN>String</VIN>
+		<RegisterDate>1900-01-01</RegisterDate>
+		<Odometer>2</Odometer>
+		<FuelType>A</FuelType>
+		<TestType>
+			<E>
+				<IdleRev>3.141593E0</IdleRev>
+				<RbLimit>3.141593E0</RbLimit>
+				<SmokeRb1>3.141593E0</SmokeRb1>
+				<SmokeRb2>3.141593E0</SmokeRb2>
+				<SmokeRb3>3.141593E0</SmokeRb3>
+				<SmokeRb4>3.141593E0</SmokeRb4>
+				<SmokeRbAvg>3.141593E0</SmokeRbAvg>
+			</E>
+		</TestType>
+		<TestNo>String</TestNo>
+		<TestTimes>2</TestTimes>
+		<TestLineNo>String</TestLineNo>
+		<TsNo>String</TsNo>
+		<Result>0</Result>
+		<LabelNo>String</LabelNo>
+		<Brand>String</Brand>
+		<Manuf>String</Manuf>
+		<DC>0.0</DC>
+		<RM>0.0</RM>
+		<GVM>0.0</GVM>
+	</Test>
+</TestData>

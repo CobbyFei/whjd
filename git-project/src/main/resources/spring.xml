@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:task="http://www.springframework.org/schema/task" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context-3.0.xsd
+						http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+
+	<!-- 引入属性文件，在和hibernate整合的時候才有用 -->
+	<context:property-placeholder location="classpath:config.properties" />
+
+	<!-- 自动扫描dao和service包(自动注入) -->
+	<context:component-scan base-package="com.dbsoft.whjd.dao, com.dbsoft.whjd.service" />
+
+	<!-- 时钟定时执行 -->
+	<bean id="SpringQtzJob" class="com.dbsoft.whjd.quartz.SpringQtz" />
+	<bean id="SpringQtzJobMethod"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="SpringQtzJob" />
+		</property>
+		<property name="targetMethod">  <!-- 要执行的方法名称 -->
+			<value>execute</value>
+		</property>
+	</bean>
+
+	<!-- author: zhuo -->
+	<!-- ==================定时执行上传环保厅====================== -->
+
+	<!-- 上传黑名单 -->
+	<!--<bean id="hBTingSynAction" class="com.dbsoft.whjd.action.HBTingSynAction" />  -->
+	<!--<task:scheduled-tasks> -->
+		<!-- <task:scheduled ref="hBTingSynAction" method="uploadStation" cron="0 0 2 * * ? " />  -->
+		<!-- <task:scheduled ref="hBTingSynAction" method="uploadSysUser" cron="0 20 2 * * ? " /> -->
+		<!-- <task:scheduled ref="hBTingSynAction" method="uploadDeteLine" cron="0 40 2 * * ? " /> -->
+		<!-- <task:scheduled ref="hBTingSynAction" method="uploadVehicleInfo" cron="0 15 23 * * ? " /> -->
+		<!-- <task:scheduled ref="hBTingSynAction" method="uploadBlackName" cron="0 20 3 * * ? " /> -->
+		<!-- <task:scheduled ref="hBTingSynAction" method="uploadReferenceMaterials" cron="0 40 3 * * ? " /> -->
+		<!-- <task:scheduled ref="hBTingSynAction" method="uploadDectectionBase" cron="0 33 21 * * ? " /> -->
+	    <!-- <task:scheduled ref="hBTingSynAction" method="uploadSteadyStateMethodResult" cron="0 17 1 * * ? " /> -->
+		<!-- <task:scheduled ref="hBTingSynAction" method="uploadTwoSpeedIdleMethodResult" cron="0 03 3 * * ? " /> -->
+		<!-- <task:scheduled ref="hBTingSynAction" method="uploadLugDownMethodResult" cron="0 49 3 * * ? " /> -->
+	<!--</task:scheduled-tasks> -->
+
+	<!-- ======================== 调度触发器 ======================== -->
+	<bean id="CronTriggerBean"
+		class="org.springframework.scheduling.quartz.CronTriggerFactoryBean ">
+		<property name="jobDetail" ref="SpringQtzJobMethod"></property>
+		<property name="cronExpression" value="0 0 2 1 * ? *"></property>
+	</bean>
+
+	<!-- ======================== 调度工厂 ======================== -->
+	<bean id="SpringJobSchedulerFactoryBean"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="CronTriggerBean" />
+			</list>
+		</property>
+	</bean>
+</beans>

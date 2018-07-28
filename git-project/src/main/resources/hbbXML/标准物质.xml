@@ -1,0 +1,11 @@
+<SMData>
+	<SM>
+		<TsNo>Str</TsNo>
+		<SMType>String</SMType>
+		<Model>String</Model>
+		<Provider>String</Provider>
+		<TestInsitution>String</TestInsitution>
+		<TestPeriod>String</TestPeriod>
+		<TestExpireDade>1900-01-01</TestExpireDade>
+	</SM>
+</SMData>

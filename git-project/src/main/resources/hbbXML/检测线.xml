@@ -1,0 +1,20 @@
+<TSLineData>
+	<TSLine>
+		<TsNo>Str</TsNo>
+		<TestLineNo>String</TestLineNo>
+		<TestType>A</TestType>
+		<SystemProvider>String</SystemProvider>
+		<Dynamometer>String</Dynamometer>
+		<DProvider>String</DProvider>
+		<Analyser>String</Analyser>
+		<AProvider>String</AProvider>
+		<Flowmeter>String</Flowmeter>
+		<FProvider>String</FProvider>
+		<Smokemeter>String</Smokemeter>
+		<SProvider>String</SProvider>
+		<Tachometer>String</Tachometer>
+		<TProvider>String</TProvider>
+		<OTSensor>String</OTSensor>
+		<OProvider>String</OProvider>
+	</TSLine>
+</TSLineData>

@@ -1,0 +1,21 @@
+<TSData>
+	<TS>
+		<TsNo>Str</TsNo>
+		<AuthCode>String</AuthCode>
+		<OrgCode>String</OrgCode>
+		<AreaCode>String</AreaCode>
+		<TestStation>String</TestStation>
+		<LegalPerson>String</LegalPerson>
+		<Tel>String</Tel>
+		<TestAddress>String</TestAddress>
+		<TestTel>String</TestTel>
+		<TestPostcode>String</TestPostcode>
+		<OrgType>A</OrgType>
+		<ExpireDate>1900-01-01</ExpireDate>
+		<RegDate>1900-01-01</RegDate>
+		<FirstAuthDate>1900-01-01</FirstAuthDate>
+		<AuthDate>1900-01-01</AuthDate>
+		<TestSafe>Y</TestSafe>
+		<TestComb>Y</TestComb>
+	</TS>
+</TSData>

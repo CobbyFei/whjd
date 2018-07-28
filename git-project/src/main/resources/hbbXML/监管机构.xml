@@ -1,0 +1,14 @@
+<OrgData>
+	<Org>
+		<OrgName>String</OrgName>
+		<OrgPerson>String</OrgPerson>
+		<OrgType>String</OrgType>
+		<Staffing>2</Staffing>
+		<OrgNumbers>2</OrgNumbers>
+		<RegTime>1900-01-01</RegTime>
+		<OrgAddress>String</OrgAddress>
+		<OrgTel>String</OrgTel>
+		<OrgPostcode>String</OrgPostcode>
+		<DepartMent>Y</DepartMent>
+	</Org>
+</OrgData>

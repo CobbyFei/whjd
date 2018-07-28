@@ -1,0 +1,9 @@
+<StandardData>
+	<Stand>
+		<Standard>String</Standard>
+		<StandardNo>String</StandardNo>
+		<ReleaseDate>1900-01-01</ReleaseDate>
+		<Scope>String</Scope>
+		<File>String</File>
+	</Stand>
+</StandardData>

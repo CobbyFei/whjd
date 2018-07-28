@@ -1,0 +1,11 @@
+<LawData>
+	<Law>
+		<DocName>String</DocName>
+		<DocNo>String</DocNo>
+		<DocType>String</DocType>
+		<ReleaseDate>1900-01-01</ReleaseDate>
+		<Releaser>String</Releaser>
+		<Scope>String</Scope>
+		<File>String</File>
+	</Law>
+</LawData>
